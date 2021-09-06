@@ -9,23 +9,11 @@ function App() {
     { name: "cherry", color: "red", price: 3 },
     { name: "strawberry", color: "red", price: 4 },
   ]);
-  function filterRedFruits() {
-    const redFruits = fruits.filter((e) => {
-      return e.color === "red";
-    });
-    setFruits(redFruits);
-  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <FruitList fruits={fruits}></FruitList>
-        <button
-          className="btnFilter"
-          setFruits={setFruits}
-          onClick={filterRedFruits}
-        >
-          Mostrar Frutas Vermelhas
-        </button>
+        <FruitList setFruits={setFruits} fruits={fruits}></FruitList>
       </header>
     </div>
   );
